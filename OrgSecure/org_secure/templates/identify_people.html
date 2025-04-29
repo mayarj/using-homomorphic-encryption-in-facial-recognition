@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload and Process</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+    <h1>Upload and Process Image</h1>
+    
+    <form id="imageUploadForm" enctype="multipart/form-data">
+        <input type="file" id="imageInput" name="image" accept="image/*" required>
+        <button type="submit">Process Image</button>
+    </form>
+    
+    <div class="image-container">
+        <div>
+            <h2>Image Preview</h2>
+            <img id="imagePreview" src="" alt="Image Preview">
+        </div>
+    </div>
+    
+    <div class="loading" id="loadingMessage">Processing images, please wait...</div>
+    
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>
