@@ -50,10 +50,24 @@ Please refer to the complete readme file  for:
 # Install dependencies
 pip install -r requirements.txt
 
-# Initialize the system (creates assets/ directory)
+
+cd .\BioEncryptService\
+# create the database
+ython manage.py migrate
+
+# run the server side
+python manage.py runserver
+```
+```bash
+cd .\OrgSecure\
+
+# create the database
+ython manage.py migrate
+
+# Initialize the system (creates assets/ directory) on the client side
 python manage.py initialize_dataset
 
 # Run the development server
-python manage.py runserver
+python manage.py runserver <IP Addres >  # run on a defrant IP Address then the server 
 ```
 
